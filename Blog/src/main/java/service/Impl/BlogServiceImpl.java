@@ -23,7 +23,7 @@ public class BlogServiceImpl implements BlogService {
         Connection connection = null;
         try {
             Class.forName("com.mysql.jdbc.Driver");
-            connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/qlbaiviet", "root", "nth050401");
+            connection = DriverManager.getConnection(jdbcURL, "root", "ductai2401");
         } catch (SQLException e) {
             // TODO Auto-generated catch block
             e.printStackTrace();

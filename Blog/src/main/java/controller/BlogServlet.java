@@ -32,7 +32,6 @@ public class BlogServlet extends HttpServlet {
         }
     }
 
-
     private void listPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String title = request.getParameter("name");
         List<Post> listPost = blogService.selectAllPosts();

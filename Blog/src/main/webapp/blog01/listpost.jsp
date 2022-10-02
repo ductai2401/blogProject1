@@ -55,9 +55,11 @@
                     <i class="fas fa-pen"></i>
                     Single Post
                 </a></li>
-                <li class="tm-nav-item"><a href="login.jsp" class="tm-nav-link">
-                    <i class="fas fa-pen"></i>
+                <li class="tm-nav-item"><a href="/Login" class="tm-nav-link">
                     Login
+                </a></li>
+                <li class="tm-nav-item"><a href="/Login" class="tm-nav-link">
+                    Register
                 </a></li>
                 <li class="tm-nav-item"><a href="about.html" class="tm-nav-link">
                     <i class="fas fa-users"></i>
