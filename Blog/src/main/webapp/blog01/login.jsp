@@ -155,9 +155,9 @@
 
     <label for="password">Password</label>
     <input type="password" placeholder="Password" id="password" name="password">
-
-    <button>Log In</button>
     <a href="/SignUp">Register</a>
+    <button>Log In</button>
+
     <div class="social">
         <div class="go"><i class="fab fa-google"></i>  Google</div>
         <div class="fb"><i class="fab fa-facebook"></i>  Facebook</div>

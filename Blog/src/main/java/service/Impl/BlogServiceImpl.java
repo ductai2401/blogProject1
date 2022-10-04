@@ -10,7 +10,7 @@ import java.util.List;
 public class BlogServiceImpl implements BlogService {
     private String jdbcURL = "jdbc:mysql://localhost:3306/qlbaiviet?useSSL=false";
     private String jdbcUsername = "root";
-    private String jdbcPassword = "nam123";
+    private String jdbcPassword = "ductai2401";
 
     private static final String SELECT_ALL_POSTS = "select * from posts";
     private static final String SEARCH_BY_TITLE = "select * from posts where title like ?";

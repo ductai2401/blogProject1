@@ -4,6 +4,8 @@ import model.Account;
 import service.AccountService;
 
 import java.sql.*;
+import java.util.ArrayList;
+import java.util.List;
 
 public class AccountServiceImpl implements AccountService {
 
@@ -11,7 +13,7 @@ public class AccountServiceImpl implements AccountService {
         Connection connection = null;
         try {
             Class.forName("com.mysql.jdbc.Driver");
-            connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/qlbaiviet?useSSL=false", "root", "nam123");
+            connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/qlbaiviet?useSSL=false", "root", "ductai2401");
         } catch (SQLException e) {
             // TODO Auto-generated catch block
             e.printStackTrace();
@@ -23,6 +25,25 @@ public class AccountServiceImpl implements AccountService {
     }
 
     public AccountServiceImpl() {
+    }
+
+    @Override
+    public List<Account> findAll() {
+        List<Account> accounts = new ArrayList<>();
+        try (Connection connection = getConnection();
+             PreparedStatement preparedStatement = connection.prepareStatement("select * from account");) {
+            System.out.println(preparedStatement);
+            ResultSet rs = preparedStatement.executeQuery();
+            while (rs.next()) {
+                int id = rs.getInt("id");
+                String username = rs.getString("username");
+                String password = rs.getString("password");
+                int role = rs.getInt(("role"));
+                accounts.add(new Account(id, username, password, role));
+            }
+        } catch (SQLException e) {
+        }
+        return accounts;
     }
 
     @Override

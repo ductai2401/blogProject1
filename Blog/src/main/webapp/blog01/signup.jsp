@@ -146,6 +146,7 @@
 <div class="background">
   <div class="shape"></div>
   <div class="shape"></div>
+  <div class="shape"></div>
 </div>
 <form method="post" action="/SignUp">
   <h3>Sign Up here</h3>

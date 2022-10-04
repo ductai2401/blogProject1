@@ -42,7 +42,7 @@
             <i class="fas fa-bars"></i>
         </button>
         <div class="tm-site-header">
-            <div class="mb-3 mx-auto tm-site-logo"><i class="fas fa-times fa-2x"></i></div>
+            <div class="mb-0 mx-auto tm-site-logo"><i class="fas fa-times fa-2x"></i></div>
             <h1 class="text-center">Xtra Blog</h1>
         </div>
         <nav class="tm-nav" id="tm-nav">
@@ -55,12 +55,27 @@
                     <i class="fas fa-pen"></i>
                     Single Post
                 </a></li>
-                <li class="tm-nav-item"><a href="/Login" class="tm-nav-link">
-                    Login
-                </a></li>
-                <li class="tm-nav-item"><a href="/Login" class="tm-nav-link">
-                    Register
-                </a></li>
+                <c:if test='${sessionScope.accountSession != null}'>
+                    <li class="tm-nav-item"><a href="" class="tm-nav-link">
+                           Hello ${sessionScope.accountSession.getUsername()}
+                    </a></li>
+                    <c:if test="${sessionScope.accountSession.getRole() == 0}">
+                        <li class="tm-nav-item"><a href="/listUser" class="tm-nav-link">
+                            List user
+                        </a></li>
+                    </c:if>
+                    <li class="tm-nav-item"><a href="/Logout" class="tm-nav-link">
+                        Log out
+                    </a></li>
+                </c:if>
+                <c:if test='${sessionScope.accountSession == null}'>
+                    <li class="tm-nav-item"><a href="/Login" class="tm-nav-link">
+                        Log In
+                    </a></li>
+                    <li class="tm-nav-item"><a href="/SignUp" class="tm-nav-link">
+                        Register
+                    </a></li>
+                </c:if>
                 <li class="tm-nav-item"><a href="about.html" class="tm-nav-link">
                     <i class="fas fa-users"></i>
                     About Xtra

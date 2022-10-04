@@ -34,6 +34,7 @@ public class BlogServlet extends HttpServlet {
                 break;
         }
     }
+
     private void detailPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String blogId =request.getParameter("id");
         BlogServiceImpl blogService1 = new BlogServiceImpl();
