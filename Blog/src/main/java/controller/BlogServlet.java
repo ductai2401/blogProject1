@@ -1,6 +1,8 @@
 package controller;
 
+import model.Account;
 import model.Post;
+import service.Impl.AccountServiceImpl;
 import service.Impl.BlogServiceImpl;
 
 import javax.servlet.*;
@@ -8,15 +10,18 @@ import javax.servlet.http.*;
 import javax.servlet.annotation.*;
 import java.io.IOException;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.List;
 
 @WebServlet(name = "BlogServlet", value = "/Blog")
 public class BlogServlet extends HttpServlet {
     private static final long serialVersionUID = 1L;
     private BlogServiceImpl blogService;
+    private AccountServiceImpl accountService;
 
     public void init() {
         blogService = new BlogServiceImpl();
+        accountService = new AccountServiceImpl();
     }
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

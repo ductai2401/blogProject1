@@ -13,7 +13,7 @@ public class AccountServiceImpl implements AccountService {
         Connection connection = null;
         try {
             Class.forName("com.mysql.jdbc.Driver");
-            connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/qlbaiviet?useSSL=false", "root", "ductai2401");
+            connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/qlbaiviet?useSSL=false", "root", "nth050401");
         } catch (SQLException e) {
             // TODO Auto-generated catch block
             e.printStackTrace();

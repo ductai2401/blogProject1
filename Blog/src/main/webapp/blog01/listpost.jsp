@@ -56,7 +56,7 @@
                     Single Post
                 </a></li>
                 <c:if test='${sessionScope.accountSession != null}'>
-                    <li class="tm-nav-item"><a href="" class="tm-nav-link">
+                    <li class="tm-nav-item"><a href="/User" class="tm-nav-link">
                            Hello ${sessionScope.accountSession.getUsername()}
                     </a></li>
                     <c:if test="${sessionScope.accountSession.getRole() == 0}">
