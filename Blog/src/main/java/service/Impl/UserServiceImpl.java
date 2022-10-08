@@ -50,8 +50,7 @@ public class UserServiceImpl implements UserService {
                 String content = rs.getString("content");
                 int status = rs.getInt("status");
                 String image = rs.getString("image");
-                String comment = rs.getString("comment");
-                listpost.add(new Post(id1,accountId,title,content,status,image,comment));
+                listpost.add(new Post(id1,accountId,title,content,status,image));
                 return listpost;
             }
         } catch (SQLException e) {

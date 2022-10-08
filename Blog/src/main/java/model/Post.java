@@ -7,19 +7,17 @@ public class Post {
     private String content;
     private int status;
     private String image;
-    private String comment;
 
     public Post() {
     }
 
-    public Post(int id, int accountId, String title, String content, int status, String image, String comment) {
+    public Post(int id, int accountId, String title, String content, int status, String image) {
         this.id = id;
         this.accountId = accountId;
         this.title = title;
         this.content = content;
         this.status = status;
         this.image = image;
-        this.comment = comment;
     }
 
     public int getId() {
@@ -70,11 +68,4 @@ public class Post {
         this.image = image;
     }
 
-    public String getComment() {
-        return comment;
-    }
-
-    public void setComment(String comment) {
-        this.comment = comment;
-    }
 }

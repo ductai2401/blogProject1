@@ -113,7 +113,7 @@
                         <hr class="tm-hr-primary tm-mb-45">
                         <div class="tm-comment tm-mb-45">
                             <figure class="tm-comment-figure">
-                                <img src="img/comment-1.jpg" alt="Image" class="mb-2 rounded-circle img-thumbnail">
+                                <img src="/blog01/img/comment-1.jpg" alt="Image" class="mb-2 rounded-circle img-thumbnail">
                                 <figcaption class="tm-color-primary text-center">Mark Sonny</figcaption>
                             </figure>
                             <div>
@@ -128,12 +128,12 @@
                                     <span class="tm-color-primary">June 14, 2020</span>
                                 </div>
                             </div>
-                        </div>
+                        </div>// sua o day
                         <div class="tm-comment-reply tm-mb-45">
                             <hr>
                             <div class="tm-comment">
                                 <figure class="tm-comment-figure">
-                                    <img src="img/comment-2.jpg" alt="Image" class="mb-2 rounded-circle img-thumbnail">
+                                    <img src="/blog01/img/comment-2.jpg" alt="Image" class="mb-2 rounded-circle img-thumbnail">
                                     <figcaption class="tm-color-primary text-center">Jewel Soft</figcaption>
                                 </figure>
                                 <p>
@@ -144,19 +144,13 @@
                             </div>
                             <span class="d-block text-right tm-color-primary">June 21, 2020</span>
                         </div>
-                        <form action="" class="mb-5 tm-comment-form">
+                        <form action="/Comment?action=comment" method="post" class="mb-5 tm-comment-form">
                             <h2 class="tm-color-primary tm-post-title mb-4">Your comment</h2>
                             <div class="mb-4">
-                                <input class="form-control" name="name" type="text">
-                            </div>
-                            <div class="mb-4">
-                                <input class="form-control" name="email" type="text">
-                            </div>
-                            <div class="mb-4">
-                                <textarea class="form-control" name="message" rows="6"></textarea>
+                                <input type="text" name="contentcomment">
                             </div>
                             <div class="text-right">
-                                <button class="tm-btn tm-btn-primary tm-btn-small">Submit</button>
+                                <button>Submit</button>
                             </div>
                         </form>
                     </div>

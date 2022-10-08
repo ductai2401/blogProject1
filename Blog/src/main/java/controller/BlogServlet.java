@@ -1,7 +1,9 @@
 package controller;
 
 import model.Account;
+import model.Comment;
 import model.Post;
+import service.BlogService;
 import service.Impl.AccountServiceImpl;
 import service.Impl.BlogServiceImpl;
 
@@ -15,6 +17,7 @@ import java.util.List;
 
 @WebServlet(name = "BlogServlet", value = "/Blog")
 public class BlogServlet extends HttpServlet {
+    public static Integer detailId = null;
     private static final long serialVersionUID = 1L;
     private BlogServiceImpl blogService;
     private AccountServiceImpl accountService;
@@ -40,8 +43,10 @@ public class BlogServlet extends HttpServlet {
         }
     }
 
+
     private void detailPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String blogId =request.getParameter("id");
+        detailId = Integer.valueOf(request.getParameter("id"));
         BlogServiceImpl blogService1 = new BlogServiceImpl();
         Post blog=new Post();
         if(blogId != null){
